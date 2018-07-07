@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const socket = require('socket.io');
 
-const server = app.listen(4000,()=>{
+const port = process.env.PORT || '4000';
+
+const server = app.listen(port,()=>{
     console.log('Listing on port 4000');
 })
 
